@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The River - Replica</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #4a5568; /* Gray 700 */
+        }
+        /* Custom styles for the fixed background image effect on the hero section */
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x800/2c3e50/ffffff?text=Luxury+Accommodation');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .section-bg-dark {
+             /* A dark, slightly desaturated blue from the original theme look */
+            background-color: #2c3e50;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-70 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <!-- Logo -->
+            <a href="#" class="text-3xl font-bold text-white tracking-widest uppercase">The River</a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex space-x-8">
+                <a href="#home" class="text-white hover:text-yellow-400 transition duration-300 font-medium">HOME</a>
+                <a href="#about" class="text-white hover:text-yellow-400 transition duration-300 font-medium">ABOUT</a>
+                <a href="#rooms" class="text-white hover:text-yellow-400 transition duration-300 font-medium">ROOMS</a>
+                <a href="#services" class="text-white hover:text-yellow-400 transition duration-300 font-medium">SERVICES</a>
+                <a href="#gallery" class="text-white hover:text-yellow-400 transition duration-300 font-medium">GALLERY</a>
+                <a href="#contact" class="text-white hover:text-yellow-400 transition duration-300 font-medium">CONTACT</a>
+            </nav>
+
+            <!-- Mobile Menu Button (Hamburger) - Using inline SVG for icon -->
+            <button id="mobile-menu-button" class="lg:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-black bg-opacity-90">
+            <nav class="flex flex-col space-y-2 p-4">
+                <a href="#home" class="text-white hover:bg-gray-700 p-2 rounded-md font-medium">HOME</a>
+                <a href="#about" class="text-white hover:bg-gray-700 p-2 rounded-md font-medium">ABOUT</a>
+                <a href="#rooms" class="text-white hover:bg-gray-700 p-2 rounded-md font-medium">ROOMS</a>
+                <a href="#services" class="text-white hover:bg-gray-700 p-2 rounded-md font-medium">SERVICES</a>
+                <a href="#gallery" class="text-white hover:bg-gray-700 p-2 rounded-md font-medium">GALLERY</a>
+                <a href="#contact" class="text-white hover:bg-gray-700 p-2 rounded-md font-medium">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section (Full-width banner with fixed background effect) -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center pt-24">
+        <div class="bg-black bg-opacity-40 p-12 md:p-16 rounded-lg text-center max-w-4xl mx-auto m-4">
+            <h1 class="text-5xl md:text-7xl font-light text-white mb-4 tracking-wider">
+                Enjoy a Luxury Experience
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8 font-extralight italic">
+                A simple mantra for a refined stay.
+            </p>
+            <a href="#rooms" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black text-lg font-bold py-3 px-8 rounded-full transition duration-300 shadow-xl uppercase tracking-wider">
+                Explore Rooms
+            </a>
+        </div>
+    </section>
+
+    <!-- Welcome / About Section -->
+    <section id="about" class="py-20 lg:py-32 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="lg:pr-12">
+                    <h2 class="text-xs uppercase text-yellow-600 font-bold tracking-widest mb-2">Welcome</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6 leading-tight">
+                        The Ultimate Relaxation Experience
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                    </p>
+                    <a href="#contact" class="inline-block bg-gray-800 hover:bg-yellow-500 text-white hover:text-black font-semibold py-3 px-6 rounded-full transition duration-300">
+                        Book Your Stay
+                    </a>
+                </div>
+                <!-- Image Placeholder -->
+                <div class="rounded-lg shadow-2xl overflow-hidden transform hover:scale-[1.01] transition duration-500">
+                    <img src="https://placehold.co/600x400/34495e/ffffff?text=Hotel+Lobby" alt="Hotel Lobby" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Features Section -->
+    <section id="services" class="py-20 lg:py-32 section-bg-dark text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-xs uppercase text-yellow-500 font-bold tracking-widest mb-2">Our Offerings</h2>
+            <h3 class="text-4xl md:text-5xl font-extrabold mb-12">Hotel Services</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-yellow-500/50 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-4xl text-yellow-500 mb-4">
+                        <!-- Icon Placeholder: Room Service -->
+                        <span class="inline-block" style="font-family: Arial, sans-serif;">🛎️</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Room Service</h4>
+                    <p class="text-gray-400 text-sm">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-yellow-500/50 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-4xl text-yellow-500 mb-4">
+                        <!-- Icon Placeholder: Swimming Pool -->
+                        <span class="inline-block" style="font-family: Arial, sans-serif;">🏊</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Swimming Pool</h4>
+                    <p class="text-gray-400 text-sm">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-yellow-500/50 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-4xl text-yellow-500 mb-4">
+                        <!-- Icon Placeholder: Conference Room -->
+                        <span class="inline-block" style="font-family: Arial, sans-serif;">💼</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Conference Room</h4>
+                    <p class="text-gray-400 text-sm">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-xl hover:shadow-yellow-500/50 transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-4xl text-yellow-500 mb-4">
+                        <!-- Icon Placeholder: Breakfast -->
+                        <span class="inline-block" style="font-family: Arial, sans-serif;">🥐</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Complimentary Breakfast</h4>
+                    <p class="text-gray-400 text-sm">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Facts / Counter Section -->
+    <section class="py-20 lg:py-32 bg-yellow-500 bg-opacity-90">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center text-gray-900">
+                <!-- Fact 1 -->
+                <div>
+                    <div class="text-5xl font-extrabold mb-1">
+                        120
+                    </div>
+                    <p class="uppercase text-sm font-semibold tracking-wider">Happy Guests</p>
+                </div>
+                <!-- Fact 2 -->
+                <div>
+                    <div class="text-5xl font-extrabold mb-1">
+                        25
+                    </div>
+                    <p class="uppercase text-sm font-semibold tracking-wider">Total Rooms</p>
+                </div>
+                <!-- Fact 3 -->
+                <div>
+                    <div class="text-5xl font-extrabold mb-1">
+                        50
+                    </div>
+                    <p class="uppercase text-sm font-semibold tracking-wider">Years of Service</p>
+                </div>
+                <!-- Fact 4 -->
+                <div>
+                    <div class="text-5xl font-extrabold mb-1">
+                        15
+                    </div>
+                    <p class="uppercase text-sm font-semibold tracking-wider">Staff Members</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-20 lg:py-32 bg-gray-100">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+            <h2 class="text-xs uppercase text-yellow-600 font-bold tracking-widest mb-2">Reviews</h2>
+            <h3 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-12">Guest Testimonials</h3>
+
+            <!-- Testimonial Item (Static for this HTML/CSS replica) -->
+            <div class="bg-white p-8 md:p-12 rounded-lg shadow-2xl">
+                <blockquote class="text-xl md:text-2xl italic text-gray-600 mb-6 leading-relaxed">
+                    &ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;
+                </blockquote>
+                <div class="flex items-center justify-center space-x-4 mt-6">
+                    <img src="https://placehold.co/64x64/34495e/ffffff?text=J.D" alt="Client Photo" class="w-16 h-16 rounded-full object-cover border-4 border-yellow-500">
+                    <div>
+                        <p class="text-lg font-bold text-gray-900">John Doe</p>
+                        <p class="text-sm text-gray-500">Regular Guest</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination dots would be here if this were a carousel -->
+            <div class="flex justify-center mt-8 space-x-2">
+                <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+                <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+                <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="section-bg-dark py-16 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-700 pb-10 mb-10">
+                <!-- About -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4 text-yellow-500">THE RIVER</h4>
+                    <p class="text-gray-400 text-sm">
+                        A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.
+                    </p>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-yellow-500 transition duration-300">About</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 transition duration-300">Rooms</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 transition duration-300">Services</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>198 West 21th Street, Suite 721 New York NY 10016</li>
+                        <li>+ 1235 2355 98</li>
+                        <li><a href="mailto:info@theriver.com" class="hover:text-yellow-500">info@theriver.com</a></li>
+                    </ul>
+                </div>
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Subscribe</h4>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Get the latest news and special offers.
+                    </p>
+                    <form onsubmit="event.preventDefault()" class="flex">
+                        <input type="email" placeholder="Email Address" class="p-3 w-full rounded-l-md border border-gray-600 bg-gray-700 text-sm text-white focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        <button type="submit" class="bg-yellow-500 text-gray-900 p-3 rounded-r-md hover:bg-yellow-600 transition duration-300 font-semibold">
+                            &gt;
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-gray-500 text-sm pt-8">
+                <p>Copyright &copy; 2024 All rights reserved | This template is made with love by Gemini</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+
+            if (button && menu) {
+                button.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+
+            // Close menu when a link is clicked (for smooth scrolling)
+            const links = menu.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
